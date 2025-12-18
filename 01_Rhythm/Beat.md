@@ -1,15 +1,14 @@
 # Beat Processing Logic
 
 ## 1. Objective
-Enhance the punch of the consolidated MPC drum track (Kick/Snare/Hats) and control the harmonic energy of the internal pitched sub-basses.
+To maintain the integrity of the MPC consolidated drums while ensuring the "pitched sub-basses" do not muddy the low-end or clash with the main Bassline.
 
 ## 2. Technical Chain (ReaEQ + ReaComp)
 
 | Stage | Plugin | Settings | Logic |
 | :--- | :--- | :--- | :--- |
-| **01 - EQ** | **ReaEQ** | **Sub-Cut:** 25Hz HPF. **Punch:** +2dB at 60Hz. **Snap:** +3dB at 3kHz. | Cleans sub-mud; emphasizes the kick "thump" and the snare "snap." |
-| **02 - Dynamics** | **ReaComp** | **Ratio:** 4:1. **Attack:** 15ms. **Release:** 100ms. | The slow attack (15ms) allows the kick and snare peaks to pass through before the compressor clamps down. |
+| **01 - EQ** | **ReaEQ** | **HPF:** 30Hz. **Kick Punch:** +2dB @ 60Hz. **Snare Snap:** +3dB @ 3kHz. | Cleans subsonic noise; emphasizes the fundamental thump and high-end definition. |
+| **02 - Dynamics**| **ReaComp**| **Ratio:** 4:1. **Attack:** 15ms. **Release:** 100ms. | Slow attack allows transients (Kick/Snare) to pass before compression kicks in. |
 
-## 3. Engineering Note: Internal Sub-Basses
-* Since the beat contains "pitched sub-basses," avoid aggressive high-shelving.
-* If the sub-basses overlap with the main **Bassline**, use a narrow EQ dip at the specific pitch frequency if masking occurs.
+## 3. Handling Pitched Sub-Basses
+* Since the beat includes melodic low-end, use a narrow EQ dip if a specific note resonates too loudly or clashes with the Bassline track.

@@ -23,6 +23,11 @@
     - *Ref:* [02_Melodic/Rhodes.md](02_Melodic/Rhodes.md)
 - [ ] **Synth:** Execute the 2kHz "Vocal Pocket" cut.
     - *Ref:* [02_Melodic/Synth.md](02_Melodic/Synth.md)
+- [ ] **Guitar:** Load **Guitar Rig** at the end of the existing chain.
+    - **Model:** Twang Reverb (Fender Twin).
+    - **Goal:** Bright, full clean tone.
+    - **Ref:** [02_Melodic/Guitar.md](02_Melodic/Guitar.md)
+
 
 ## ⚪ Step 4: Atmospheric Depth
 - [ ] **Send to Atmos:** Route the `LEAD_VOCAL_FOLDER` to the `ATMOS_BUS` (Voxengo).
