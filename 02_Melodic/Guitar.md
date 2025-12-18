@@ -10,7 +10,8 @@ To achieve a bright, "glassy" Fender-style clean tone that cuts through the atmo
 | **01** | **ReaVerberate** | Initial Space | Room size: 30 | Dampening: 50. |
 | **02** | **JS: Delay (Floaty)** | Modulation | Delay: 342ms | Mix: 31% | Feedback: 25%. |
 | **03** | **ReaEQ** | Pre-Amp Prep | Subtle HPF at 180Hz to prevent low-end "chugging." |
-| **04** | **Guitar Rig (NEW)** | Amp Simulation | **Target:** Fender Twin Reverb or Deluxe Reverb model. |
+| **04** | **ReaComp (NEW)** | Compressor | Stabilize the input signal |
+| **05** | **Guitar Rig (NEW)** | Amp Simulation | **Target:** Fender Twin Reverb or Deluxe Reverb model. |
 
 ## 3. Guitar Rig Configuration (Fender Emulation)
 * **Amp Model:** Choose the **"Twang Reverb"** (Guitar Rig's Fender Twin emulation).
