@@ -1,56 +1,25 @@
 # Implementation Runbook: step-by-step
-**Status:** 🟢 Ready for Execution
-**Version:** 1.0.0 (Rapid Mix)
+**Status:** 🟠 In Progress (Vocal Integration)
 
-This document serves as the technical roadmap for the mixing session, linking to the specific logic defined in the project documentation.
+## 🟢 Step 1: Data Normalization (COMPLETE)
+- [x] Select all items.
+- [x] Normalize to **-12dB Peak** (Common Gain).
+    - *Result:* Mix headroom established at -5.68dB on Master.
 
----
+## 🟠 Step 2: Vocal Architecture (CURRENT TASK)
+- [x] **Create Folder:** Create `LEAD_VOCAL_FOLDER` and move `voz boa` & `voz boa 2` inside.
+- [x] **Handle Overlaps:** Check the transitions at [1:36.000]. Use 50ms crossfades where phrases overlap.
+- [ ] **iZotope Chain:** Load the processing chain on the **Folder Track** (not the individual tracks).
+    - *Technical Details:* See [03_Vocals/Lead_Vocal.md Section 3]
 
-## 🟢 Phase 1: Data Prep & Environment Setup
-*Goal: Establish headroom and a clean "source of truth."*
+## ⚪ Step 3: Frequency Slotting (The "No-Sidechain" Fix)
+- [ ] **Bass/Beat Pocket:** EQ cut -3dB at 80Hz on the Bassline.
+- [ ] **Melodic Pocket:** EQ cut -2dB at 2kHz on Rhodes/Synth tracks to clear space for the voice.
 
-1.  **Vocal Comping:** Consolidate `voz boa 1` and `2` into a single "Lead" track.
-    * *Ref:* [03_Vocals/Lead_Vocal.md](03_Vocals/Lead_Vocal.md)
-2.  **Gain Staging:** Normalize all MPC stems and live recordings to peak at **-12dB**.
-3.  **Global Routing:** Create the `ATMOS_BUS`.
-    * *Ref:* [04_Busses_FX/Atmosphere_Bus.md](04_Busses_FX/Atmosphere_Bus.md)
+## ⚪ Step 4: Atmospheric Depth
+- [ ] **Send to Atmos:** Route the `LEAD_VOCAL_FOLDER` to the `ATMOS_BUS` (Voxengo).
+    - *Target:* -18dB send level for subtle "Pop" depth.
 
----
-
-## 🟡 Phase 2: Frequency Slotting (The "No-Sidechain" Fix)
-*Goal: Resolve low-end and vocal masking via surgical EQ.*
-
-1.  **Bassline vs. Beat:** Open **ReaEQ** on Bassline; carve the Kick pocket (60Hz-100Hz).
-    * *Ref:* [00_Project_Specs.md](00_Project_Specs.md) (Strategy Section)
-2.  **Melodic Pocketing:** Dip the Rhodes and Synth at **1.5kHz - 3kHz** to make room for the Lead Vocal.
-3.  **Guitar Character:** Initialize **Guitar Rig**; focus on "Dreamy/Modulated" tones to match the Rhodes.
-    * *Ref:* [02_Melodic/Guitar.md](02_Melodic/Guitar.md)
-
----
-
-## 🔵 Phase 3: The Atmospheric Layering
-*Goal: Merging live elements with MPC "baked" textures.*
-
-1.  **Voxengo Deployment:** Set **OldSkoolVerb** to "Plate" mode with 30ms Pre-delay.
-2.  **Dry/Wet Balance:** * Send **Guitar** to Atmos Bus at -10dB.
-    * Send **Voice** to Atmos Bus at -15dB.
-    * Send **Rhodes/Synth** at -20dB (Correctional glue only).
-    * *Ref:* [04_Busses_FX/Atmosphere_Bus.md](04_Busses_FX/Atmosphere_Bus.md)
-
----
-
-## 🔴 Phase 4: Final Compilation (Mastering)
-*Goal: Achieving commercial loudness and final glue.*
-
-1.  **Master Chain:** Engage iZotope Ozone/Neutron on the Master track.
-2.  **Loudness Targeting:** Monitor via **Youlean Loudness Meter**.
-    * **Target:** -14 LUFS / -1.0dB True Peak.
-    * *Ref:* [04_Busses_FX/Mix_Bus.md](04_Busses_FX/Mix_Bus.md)
-
----
-
-## 🏁 Deployment Checklist
-- [ ] Vocal is intelligible and sits "above" the synths?
-- [ ] Bass and Kick are distinct without sidechaining?
-- [ ] Atmosphere is lush but doesn't wash out the "Beat" transients?
-- [ ] Repository documentation updated with final EQ/Compression values?
+## ⚪ Step 5: Master "Production"
+- [ ] **Limiter:** Engage iZotope Ozone Maximizer.
+- [ ] **Target:** -14 LUFS (Verify with Youlean).
