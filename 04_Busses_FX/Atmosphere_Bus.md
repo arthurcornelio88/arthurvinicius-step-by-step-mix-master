@@ -1,32 +1,29 @@
-# Atmosphere Bus (The Global Spatial Variable)
+# Atmosphere Bus (Voxengo OldSkoolVerb Implementation)
 
 ## 1. Concept
-Instead of putting reverb on every track (which consumes CPU and creates "mud"), we use a **Shared FX Bus**. This creates a cohesive "acoustic space" where all instruments coexist.
+A centralized FX Bus to provide shared spatial DNA for the Lead Voice, Guitar, Rhodes, and Synth.
 
-## 2. REAPER Configuration
-* **Track Name:** `ATMOS_BUS`
-* **Input:** Receive only (No direct audio).
-* **Routing:** All melodic tracks (Guitar, Rhodes, Synth, Voice) send a portion of their signal here.
+## 2. Technical Chain (As-Built)
+* **Track:** `Atmos_Bus` (Track 5)
+* **Plugin:** VST3: Voxengo OldSkoolVerb
+* **Routing:** Direct sends from melodic tracks; `DRY MUTE` active to ensure 100% wet output.
 
-## 3. Plugin: Voxengo OldSkoolVerb
-To achieve the **Atmospheric Pop** sound, we want a "Lush but Clear" profile.
+## 3. Parameter Configuration (Verified)
+Based on the current "Atmospheric Pop" calibration:
 
-| Parameter | Setting | Logic |
+| Parameter | Value | Engineering Logic |
 | :--- | :--- | :--- |
-| **Mode** | Reverb / Plate | Plates work best for Pop vocals and guitars. |
-| **Pre-Delay** | 30ms - 50ms | Critical. This separates the dry signal from the wash, keeping the mix punchy. |
-| **Space / Time** | 2.5s - 3.5s | Long enough for "Atmosphere," but not so long it overlaps the next chord change. |
-| **Damping** | Moderate | Roll off highs above 6kHz to keep the reverb "darker" than the lead vocal. |
-| **Width** | 100% - 120% | Maximize the stereo field to leave the "center" open for Kick and Lead Vocal. |
+| **Pre-Delay** | 50.0 | High separation to keep the vocal transient dry and forward. |
+| **Space** | 70.0 | Defines the size of the virtual room. |
+| **Time** | 2000ms | 2.0s decay; provides "Atmosphere" without mudding the beat. |
+| **Width** | 75.0 | Stereo spread; keeps the center clear for Kick/Voice. |
+| **Damp Hi** | 7.00K | Tames digital sizzle for a warmer, more "analog" tail. |
+| **EQ Mid** | -3.0 | Surgical dip in the mid-range to prevent reverb "clash". |
+| **Reverb Gain**| -6.0 | Calibrated output level for the bus return. |
 
-## 4. The "Abbey Road" Filter Trick
-Place **ReaEQ** *before* the OldSkoolVerb on this bus to clean the input:
-* **High Pass Filter (HPF):** 400Hz (Removes low-end clutter).
-* **Low Pass Filter (LPF):** 6kHz (Removes "cheap" digital sizzle).
-* **Result:** The reverb only lives in the mid-range, leaving the sub-bass and the vocal "air" pristine.
+## 4. UI Note: Mode Selection
+In this version, specific algorithm "Modes" (Plate/Hall) are accessed via the **EDIT** button next to "DEFAULT". For this project, the **DEFAULT** mode is utilized with manual knob shaping to achieve the "Atmospheric" target.
 
-## 5. Mix Logic (The "Dry-to-Wet" Ratio)
-* **Beat:** 0% Send (Keep it dry and punchy).
-* **Rhodes/Synth:** 15% Send (They already have native FX; this just "glues" them).
-* **Guitar:** 30% Send (Needs more space to match the synths).
-* **Voice:** 20% Send (Adjust until it feels "embedded" but legible).
+## 5. Execution Check
+- [x] `DRY MUTE` engaged? (Ensures no dry signal doubling).
+- [x] Input EQ clean? (HPF/LPF verified in project).
