@@ -1,30 +1,17 @@
-# Lead Vocal Processing (The "Voz Boa" Consolidation)
+# Lead Vocal Processing (Ponta-Cabeca Reference)
 
 ## 1. Objective
-To create a polished, "in-your-face" pop vocal that sits comfortably within the atmospheric MPC-generated backdrop.
+Achieve a polished vocal using the established "Ponta-Cabeca" processing chain, adapted for the single "Lead Voice" track.
 
-## 2. Pre-Processing: Comping & Cleanup
-* **Consolidation:** Selected best phrases from `voz boa` and `voz boa 2`.
-* **Correction:** Use **iZotope RX** (Spectral De-noise/De-click) if the live environment had any floor noise or mouth clicks.
-* **Pitch:** Apply gentle pitch correction (iZotope Nectar or your preferred tuner) to ensure the modern Pop "sheen."
+## 2. Technical Chain (The "Old Ref" Method)
 
-## 3. The iZotope Stack (Main Chain)
-Place these on the consolidated "Lead Voice" track:
-
-| Stage | Plugin | Strategy |
+| Stage | Plugin | Strategy/Settings |
 | :--- | :--- | :--- |
-| **01 - EQ** | iZotope Neutron/Nectar | **Subtractive:** Cut mud at 200Hz-300Hz. **Addative:** High-shelf boost starting at 8kHz for "air." |
-| **02 - Dynamics** | iZotope Compressor | **Parallel Compression:** Use a high ratio (4:1) with a fast attack to catch peaks, blended at 60% wet. |
-| **03 - De-Esser** | iZotope Nectar | Target 5kHz - 8kHz to tame harsh "S" sounds made prominent by the high-shelf boost. |
-| **04 - Exciter** | iZotope Nectar | Use "Saturn" or "Tube" mode slightly to add harmonics, helping the vocal cut through the dense Rhodes/Synth. |
+| **01 - Cleanup** | **iZotope RX 11 Mouth De-click** | Remove transient saliva/mouth clicks. |
+| **02 - Tone** | **ReaEQ (Cockos)** | **HPF:** 100Hz. **Low Mid:** -3dB at 350Hz. **Air:** +2.5dB High Shelf at 10kHz. |
+| **03 - Compression** | **ReaComp (Cockos)** | **Ratio:** 3:1. **Attack:** 5ms. **Release:** 100ms. Aim for 3-4dB gain reduction. |
+| **04 - Space** | **OldSkoolVerb (Voxengo)** | **Mix:** 15-20% (or via Bus Send). Mode: "Clear Hall" or "Plate." |
 
-## 4. The Atmosphere (Spatial)
-To avoid the vocal sounding "disconnected" from the MPC tracks:
-* **Bus Send:** Route to **OldSkoolVerb**.
-* **Setting:** Moderate Pre-delay (~20-40ms). This keeps the vocal dry and close, while the "Atmosphere" trail starts slightly later.
-* **Effect:** This creates the "Atmospheric Pop" depth without washing out the lyrics.
-
-## 5. Engineering Note: Frequency Carving
-* **Action:** Check the **Rhodes** and **Synth** tracks.
-* **EQ:** Apply a wide, shallow dip (-2dB to -3dB) between **1kHz and 3kHz** on those instruments.
-* **Result:** This creates a "frequency pocket" for the voice to live in, eliminating the need for complex sidechaining.
+## 3. Workflow Notes
+* **Merge Validation:** Since the tracks were merged, check the transition points for phase alignment or volume inconsistencies.
+* **CPU Management:** RX 11 is CPU-intensive. Apply it first, then consider "Freezing" the track if Reaper playback stutters.
