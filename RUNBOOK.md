@@ -29,7 +29,7 @@
     - **Ref:** [02_Melodic/Guitar.md](02_Melodic/Guitar.md)
 
 ## ⚪ Step 4: Atmospheric Depth
-- [ ] **Send to Atmos:** Route the `LEAD_VOCAL_FOLDER` to the `ATMOS_BUS` (Voxengo).
+- [x] **Send to Atmos:** Route the `LEAD_VOCAL_FOLDER` to the `ATMOS_BUS` (Voxengo).
     - *Target:* -18dB send level for subtle "Pop" depth.
 
 ## ⚪ Step 5: Master "Production"

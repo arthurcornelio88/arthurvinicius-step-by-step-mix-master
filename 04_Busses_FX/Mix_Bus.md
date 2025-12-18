@@ -1,19 +1,23 @@
-# Mix Bus & Final Mastering Logic
+# Mix Bus & Final Mastering Logic (Legacy Port)
 
 ## 1. Objective
-To "glue" the atmospheric layers together and achieve commercial loudness (-14 to -12 LUFS) without destroying the transients of the MPC beat.
+To "glue" the atmospheric layers together, add analog-style saturation, and achieve commercial loudness targets using the established legacy plugin chain.
 
-## 2. The Master Chain (iZotope / Cockos)
+## 2. The Master Chain (Refactor)
 
-| Stage | Plugin | Logic |
-| :--- | :--- | :--- |
-| **01 - Glue** | ReaComp / iZotope | **Slow Attack (30ms), Fast Release.** Ratio 1.5:1. Only 1-2dB of reduction. This makes the beat and the synths feel like "one instrument." |
-| **02 - Tonal EQ** | iZotope Ozone EQ | **Matching:** Compare against a reference Atmospheric Pop track. Usually requires a tiny "smile" curve (+1dB at 60Hz, +1dB at 10kHz). |
-| **03 - Imager** | iZotope Ozone Imager | **Stereo Width:** Keep frequencies below 200Hz in mono. Widen the 2kHz+ range by 10-15% to enhance the "Atmosphere." |
-| **04 - Maximizer** | iZotope Ozone Limiter | **Mode:** IRC IV (Modern). Target -14 LUFS for streaming. Set Ceiling to -1.0dB to prevent TP (True Peak) clipping. |
+| Order | Plugin | Role | Setting/Strategy |
+| :--- | :--- | :--- | :--- |
+| **01** | **FerricTDS** | Tape Dynamics/Saturation | **Drive:** +1.0 dB. Adds harmonic "glue" and tames transients smoothly. |
+| **02** | **TDR Nova** | Dynamic EQ | **Tonal Balance:** Gentle adjustments (±2 dB max) to polish the final spectrum. |
+| **03** | **LoudMax** | Lookahead Limiter | **Output:** -1.0 dBTP. Adjust **Threshold** to hit the LUFS target. |
+| **04** | **Youlean Loudness Meter** | Analysis | Final verification of Integrated LUFS and True Peak. |
 
-## 3. Analysis Metrics
-* **Target Loudness:** -14 LUFS (Integrated).
-* **Peak:** -1.0 dBFS.
-* **LRA (Loudness Range):** Aim for 6-8 LU rating for Pop (keep it dynamic but controlled).
-* **Tool:** **Youlean Loudness Meter** at the very end of the chain.
+## 3. Technical Targets
+* **Streaming (YouTube/Spotify):** -14 LUFS Integrated.
+* **Peak Ceiling:** -1.0 dBTP (True Peak) to prevent distortion during platform transcoding.
+* **Dynamics:** Monitor the Loudness Range (LRA) to ensure the "Atmospheric" breath is preserved.
+
+## 4. Execution Notes
+* **FerricTDS:** Use this to add "weight" to the MPC beat and the low-end.
+* **TDR Nova:** Focus on the 2kHz - 5kHz range if the vocal or guitar feels too "piercing" at high volumes.
+* **LoudMax:** The primary tool for loudness. Ensure the gain reduction meter isn't constantly pinned; aim for transparent limiting.
