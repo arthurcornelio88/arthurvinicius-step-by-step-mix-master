@@ -33,5 +33,4 @@
     - *Target:* -18dB send level for subtle "Pop" depth.
 
 ## ⚪ Step 5: Master "Production"
-- [ ] **Limiter:** Engage iZotope Ozone Maximizer.
-- [ ] **Target:** -14 LUFS (Verify with Youlean).
+- [x] **Target:** -14 LUFS (Verify with Youlean).
