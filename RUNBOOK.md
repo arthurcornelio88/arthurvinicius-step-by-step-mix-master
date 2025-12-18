@@ -12,9 +12,17 @@
 - [x] **Apply Ponta-Cabeca EQ:** Load **ReaEQ** with the 350Hz cut and 10kHz air boost.
 - [x] **Apply Dynamics:** Load **ReaComp** with a 3:1 ratio to stabilize the vocal levels.
 
-## ⚪ Step 3: Frequency Slotting (The "No-Sidechain" Fix)
-- [ ] **Bass/Beat Pocket:** EQ cut -3dB at 80Hz on the Bassline.
-- [ ] **Melodic Pocket:** EQ cut -2dB at 2kHz on Rhodes/Synth tracks to clear space for the voice.
+## ⚪ Step 3: Frequency Slotting & Component Processing
+*Goal: Data separation and instrumental clarity.*
+
+- [ ] **Beat:** Apply punch EQ and transient-preserving compression.
+    - *Ref:* [01_Rhythm/Beat.md](01_Rhythm/Beat.md)
+- [ ] **Bassline:** Execute the 80Hz "Kick Pocket" cut.
+    - *Ref:* [01_Rhythm/Bassline.md](01_Rhythm/Bassline.md)
+- [ ] **Rhodes:** Execute the 2kHz "Vocal Pocket" cut.
+    - *Ref:* [02_Melodic/Rhodes.md](02_Melodic/Rhodes.md)
+- [ ] **Synth:** Execute the 2kHz "Vocal Pocket" cut.
+    - *Ref:* [02_Melodic/Synth.md](02_Melodic/Synth.md)
 
 ## ⚪ Step 4: Atmospheric Depth
 - [ ] **Send to Atmos:** Route the `LEAD_VOCAL_FOLDER` to the `ATMOS_BUS` (Voxengo).
