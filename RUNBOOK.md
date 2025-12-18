@@ -15,9 +15,9 @@
 ## ⚪ Step 3: Frequency Slotting & Component Processing
 *Goal: Data separation and instrumental clarity.*
 
-- [ ] **Beat:** Apply punch EQ and transient-preserving compression.
+- [x] **Beat:** Apply punch EQ and transient-preserving compression.
     - *Ref:* [01_Rhythm/Beat.md](01_Rhythm/Beat.md)
-- [ ] **Bassline:** Execute the 80Hz "Kick Pocket" cut.
+- [x] **Bassline:** Execute the 80Hz "Kick Pocket" cut.
     - *Ref:* [01_Rhythm/Bassline.md](01_Rhythm/Bassline.md)
 - [ ] **Rhodes:** Execute the 2kHz "Vocal Pocket" cut.
     - *Ref:* [02_Melodic/Rhodes.md](02_Melodic/Rhodes.md)
