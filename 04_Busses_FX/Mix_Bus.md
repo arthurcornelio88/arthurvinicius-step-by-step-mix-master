@@ -21,3 +21,8 @@ To "glue" the atmospheric layers together, add analog-style saturation, and achi
 * **FerricTDS:** Use this to add "weight" to the MPC beat and the low-end.
 * **TDR Nova:** Focus on the 2kHz - 5kHz range if the vocal or guitar feels too "piercing" at high volumes.
 * **LoudMax:** The primary tool for loudness. Ensure the gain reduction meter isn't constantly pinned; aim for transparent limiting.
+
+## 5. Advanced Dynamics (FerricTDS mkII)
+* **High-End Smoothing:** Used as a global de-esser for the "Atmosphere" by pushing Saturation to 25%.
+* **Transient Glue:** Dynamics knob set to 30% to pull the Kick/Snare peaks into the instrumental bed.
+* **Recovery:** Set to "Fast" to maintain the "step-by-step" rhythmic urgency.
