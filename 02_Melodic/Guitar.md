@@ -19,3 +19,13 @@ To achieve a bright, "glassy" Fender-style clean tone that cuts through the atmo
     * **Treble:** 7.5 | **Middle:** 4.0 | **Bass:** 3.5.
     * **Cabinet:** Use a 2x12 Open Back cabinet for maximum "air."
 * **Post-Amp:** Add a gentle **Limiter** inside Guitar Rig to keep the transients from peaking above -12dB.
+
+## 4. Dynamics: ReaComp (Cockos)
+Place this AFTER the delay but BEFORE Guitar Rig to stabilize the input signal.
+
+| Parameter | Setting | Logic |
+| :--- | :--- | :--- |
+| **Ratio** | 2.5:1 | Gentle control to maintain a "natural" feel. |
+| **Attack** | 10.0 ms | Allows the initial pick attack to remain "bright" before compression. |
+| **Release** | 150 ms | Smoothly returns the gain, sustaining the reverb/delay tails. |
+| **Threshold** | Adjust for -3dB | Target just enough reduction to even out the performance. |

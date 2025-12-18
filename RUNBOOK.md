@@ -19,11 +19,11 @@
     - *Ref:* [01_Rhythm/Beat.md](01_Rhythm/Beat.md)
 - [x] **Bassline:** Execute the 80Hz "Kick Pocket" cut.
     - *Ref:* [01_Rhythm/Bassline.md](01_Rhythm/Bassline.md)
-- [ ] **Rhodes:** Execute the 2kHz "Vocal Pocket" cut.
+- [x] **Rhodes:** Execute the 2kHz "Vocal Pocket" cut.
     - *Ref:* [02_Melodic/Rhodes.md](02_Melodic/Rhodes.md)
-- [ ] **Synth:** Execute the 2kHz "Vocal Pocket" cut.
+- [x] **Synth:** Execute the 2kHz "Vocal Pocket" cut.
     - *Ref:* [02_Melodic/Synth.md](02_Melodic/Synth.md)
-- [ ] **Guitar:** Load **Guitar Rig** at the end of the existing chain.
+- [x] Guitar: ReaVerberate -> Floaty Delay -> ReaComp -> ReaEQ -> Guitar Rig.
     - **Model:** Twang Reverb (Fender Twin).
     - **Goal:** Bright, full clean tone.
     - **Ref:** [02_Melodic/Guitar.md](02_Melodic/Guitar.md)
